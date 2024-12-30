@@ -10,7 +10,9 @@ import {
 } from "../featurs/counter";
 
 const Counter = () => {
+  // state => represents the init value for the slice {count : 0}
   const count = useSelector((state) => state.count);
+  // const count = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
 
   const [amount, setAmount] = useState(0);
