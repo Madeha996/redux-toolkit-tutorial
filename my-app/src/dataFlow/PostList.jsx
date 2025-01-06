@@ -1,11 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectAllPosts } from "../featurs/Post";
+import { selectAllPosts } from "../featurs/post";
 
 const PostList = () => {
   const posts = useSelector(selectAllPosts);
-
-  console.log("posts", posts);
 
   const renderPosts = posts.map((post) => {
     return (

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./index.css";
-import PostCard from "./PostList";
 import { useDispatch } from "react-redux";
-import { postAdded } from "../featurs/Post";
+import { postAdded } from "../featurs/post";
 import PostList from "./PostList";
-import { nanoid } from "@reduxjs/toolkit";
 
 const Post = () => {
   const dispatch = useDispatch();
@@ -15,16 +13,12 @@ const Post = () => {
     auther: "",
     content: "",
   });
-  const [posts, setPosts] = useState([]);
 
   const isDisabled =
     values.title === "" || values.auther === "" || values.content === "";
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newPosts = [...posts];
-    newPosts.push(values);
-    setPosts(newPosts);
     setValues({ id: "", title: "", auther: "", content: "" });
   };
 
