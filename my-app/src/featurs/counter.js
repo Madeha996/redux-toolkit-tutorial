@@ -38,4 +38,4 @@ export const {
   resetCount,
 } = counterSlice.actions;
 
-export default counterSlice.reducer;
+export default counterSlice.reducer;  
